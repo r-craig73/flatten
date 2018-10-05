@@ -9,6 +9,15 @@ class Flatten
   end
 
   def flats
-    
+    original = @array1.to_s
+    new_array = original.split
+    final_array = []
+    new_array.map do |i|
+      if i.include? ','
+        final_array.push('')
+      else
+        final_array.push(i)
+      end
+    end
   end
 end
